@@ -2562,6 +2562,10 @@ int kvm_cpu_exec(CPUState *cpu)
                 break;
             }
             break;
+        case KVM_EXIT_WT_INFO:
+                handle_hypercall_wt_next_payload(run, cpu);
+                ret = 0;
+                break;
         default:
             DPRINTF("kvm_arch_handle_exit\n");
             ret = kvm_arch_handle_exit(cpu, run);

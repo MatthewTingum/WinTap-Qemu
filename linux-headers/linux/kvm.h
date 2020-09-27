@@ -249,6 +249,10 @@ struct kvm_hyperv_exit {
 #define KVM_EXIT_HYPERV           27
 #define KVM_EXIT_ARM_NISV         28
 
+// WinTap / kAFL hypercalls
+// 100 - 150 Reserved for existing and future kAFL hypercalls
+#define KVM_EXIT_WT_INFO	  111
+
 /* For KVM_EXIT_INTERNAL_ERROR */
 /* Emulate instruction failed. */
 #define KVM_INTERNAL_ERROR_EMULATION	1
